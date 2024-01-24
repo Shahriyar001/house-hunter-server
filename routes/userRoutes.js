@@ -4,6 +4,7 @@ import {
   cancelBooking,
   createUser,
   getAllBookings,
+  getAllFavorites,
   toFav,
 } from "../controllers/userCntrl.js";
 const router = express.Router();
@@ -13,5 +14,6 @@ router.post("/bookvisit/:id", bookVisit);
 router.post("/allBookings", getAllBookings);
 router.post("/removeBooking/:id", cancelBooking, getAllBookings);
 router.post("/toFav/:rid", toFav);
+router.post("/allFav", getAllFavorites);
 
 export { router as userRoute };
